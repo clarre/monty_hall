@@ -23,10 +23,11 @@ public class Simulation {
         this.doors = montyHallDoors;
         this.playerChoosesDoor = randomDoor.nextInt(DOORS);
 
+        // Randomize until host takes a door that's a GOAT
         do {
             this.hostShowsDoor = randomDoor.nextInt(DOORS);
         }
-        while(this.hostShowsDoor != this.playerChoosesDoor);
+        while(this.hostShowsDoor == this.playerChoosesDoor || montyHallDoors[this.hostShowsDoor] == CAR );
 
         this.playerChangingDoor = playerChangingDoor;
     }

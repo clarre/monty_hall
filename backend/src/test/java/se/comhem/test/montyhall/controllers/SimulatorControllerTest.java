@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
-import se.comhem.test.montyhall.models.Simulation;
 import se.comhem.test.montyhall.services.SimulationService;
 
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ class SimulatorControllerTest {
 
     @Test
     void ShouldReturnOk() throws Exception{
-        when(simulationService.runSimulation(false, 1)).thenReturn(new ArrayList<Simulation>());
+        when(simulationService.runSimulation(false, 1)).thenReturn(new ArrayList<>());
 
         this.mockMvc.perform(get("/simulate/change/false/times/1"))
                 .andExpect(status().isOk());
@@ -33,7 +32,7 @@ class SimulatorControllerTest {
 
     @Test
     void ShouldReturnBadRequestWhenChangeDoorIsNotBoolValue() throws Exception{
-        when(simulationService.runSimulation(false, 1)).thenReturn(new ArrayList<Simulation>());
+        when(simulationService.runSimulation(false, 1)).thenReturn(new ArrayList<>());
 
         this.mockMvc.perform(get("/simulate/change/3/times/1"))
                 .andExpect(status().isBadRequest());
@@ -41,7 +40,7 @@ class SimulatorControllerTest {
 
     @Test
     void ShouldReturnBadRequestWhenNumberOfTimesIsNotIntegerValue() throws Exception{
-        when(simulationService.runSimulation(false, 1)).thenReturn(new ArrayList<Simulation>());
+        when(simulationService.runSimulation(false, 1)).thenReturn(new ArrayList<>());
 
         this.mockMvc.perform(get("/simulate/change/false/times/3.0"))
                 .andExpect(status().isBadRequest());
