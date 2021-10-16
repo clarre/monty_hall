@@ -1,0 +1,36 @@
+.SimulatorResult table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.SimulatorResult table td, .SimulatorResult table th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+
+.SimulatorResult table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+.SimulatorResult table tr:nth-child(even){background-color: #ebe5e5;}
+
+.SimulatorResult table tr:hover {background-color: #ddd;}
+
+.SimulatorResultError {
+    padding-top: 24px;
+    font-size: 24px;
+}
+
+.SimulatorResult .score {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 18px;
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import monty from './monty.jpg';
 import './App.css';
-import BackendHealth from './BackendHealth/BackendHealth';
+import BackendHealth from './components/BackendHealth/BackendHealth';
+import MontyHallContainer from './containers/MontyHallContainer/MontyHallContainer';
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
                 <img src={monty} className="App-monty" alt="logo"/>
                 <h1 className="App-title">Welcome to the Monty Hall Simulator</h1>
             </header>
+            <MontyHallContainer />
         </div>
     );
 }

@@ -1,0 +1,16 @@
+.SimulatorSettings form label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.SimulatorSettings input[type=submit] {
+    background-color: #0349c7;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
